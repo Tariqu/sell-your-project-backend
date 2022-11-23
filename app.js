@@ -6,6 +6,7 @@ const AppError = require('./utils/appError');
 // All routes
 const authRoute = require('./routes/authRoute');
 const userRoute = require('./routes/userRoute');
+const productRoute = require('./routes/productRoute');
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 // all route
 app.use('/api/v1/auth', authRoute);
 app.use('/api/v1/users', userRoute);
+app.use('/api/v1/products', productRoute);
 
 app.all(
   '*',
