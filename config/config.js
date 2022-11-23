@@ -16,6 +16,7 @@ module.exports = {
     database: process.env.TEST_DATABASE_NAME,
     host: process.env.TEST_DATABASE_HOST,
     port: process.env.TEST_DATABASE_PORT,
+    seederStorage: 'sequelize',
     dialect: 'postgres',
   },
   production: {
@@ -24,6 +25,7 @@ module.exports = {
     database: process.env.PROD_DATABASE_NAME,
     host: process.env.PROD_DATABASE_HOST,
     port: process.env.PROD_DATABASE_PORT,
+    seederStorage: 'sequelize',
     dialect: 'postgres',
   },
 };

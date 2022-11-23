@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 
 const gloabalErrorHandler = require('./controllers/errorController');
 const catchAsync = require('./utils/catchAsync');
@@ -11,6 +12,8 @@ const productRoute = require('./routes/productRoute');
 const app = express();
 
 app.use(express.json());
+
+app.use(cors());
 
 // all route
 app.use('/api/v1/auth', authRoute);
