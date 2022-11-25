@@ -1,4 +1,4 @@
-const { DataTypes } = require('sequelize/types');
+const { DataTypes } = require('sequelize');
 const sequelize = require('../../config/database');
 
 const Project = sequelize.define(
@@ -12,10 +12,13 @@ const Project = sequelize.define(
     },
     title: {
       // 0: admin, 1: seller, 2: buyer
-      type: DataTypes.ENUM('0', '1', '2'),
+      type: DataTypes.STRING,
     },
     thumbnail: {
       type: DataTypes.STRING,
+      validate: {
+        isUrl: true
+      }
     },
     isFeatured: {
       type: DataTypes.BOOLEAN,

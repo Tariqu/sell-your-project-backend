@@ -23,6 +23,14 @@ exports.createProduct = catchAsync(async (req, res, next) => {
   });
 });
 
+exports.getProducts = catchAsync(async (req, res, next) => {
+  const result = await Product.findAll();
+  res.status(200).json({
+    status: 'success',
+    data: result
+  });
+})
+
 exports.updateUser = catchAsync(async (req, res, next) => {
   const user = req.user;
   const { firstName, lastName, profilePic, address } = req.body;

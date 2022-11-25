@@ -11,7 +11,7 @@ module.exports = {
       },
       title: {
         // 0: admin, 1: seller, 2: buyer
-        type: sequelize.ENUM('0', '1', '2'),
+        type: sequelize.STRING,
       },
       thumbnail: {
         type: sequelize.STRING,
