@@ -62,7 +62,6 @@ exports.restrictTo = (...userType) => {
 
 exports.login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
-  console.log(email, password);
   if (!email || !password) {
     return next(new AppError('Please provide email and password', 400));
   }
