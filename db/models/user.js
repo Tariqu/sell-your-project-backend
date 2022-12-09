@@ -86,7 +86,7 @@ const User = sequelize.define(
             city: { type: 'string', required: true },
             state: { type: 'string', required: true },
             zipcode: {
-              type: 'number',
+              type: 'string',
               required: true,
               maxLength: 6,
               minLength: 6,
